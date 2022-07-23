@@ -579,8 +579,8 @@ section h5 {
   width: 4.6rem;
   height: 4.6rem;
   margin-top: -2.3rem;
-  background: var(--color-button-icon) url(img/angle-left.svg) no-repeat center
-    center;
+  background: var(--color-button-icon) url(../img/angle-left.svg) no-repeat
+    center center;
   background-size: 1.5rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -605,7 +605,7 @@ section h5 {
 #screenshotPreview #btnClose {
   top: 6rem;
   right: 4rem;
-  background-image: url(img/xmark.svg);
+  background-image: url(../img/xmark.svg);
 }
 
 .about li a {
@@ -619,30 +619,30 @@ section h5 {
 }
 
 .about li a.facebook {
-  mask-image: url(img/facebook.svg);
-  -webkit-mask-image: url(img/facebook.svg);
+  mask-image: url(../img/facebook.svg);
+  -webkit-mask-image: url(../img/facebook.svg);
 }
 .about li a.youtube {
-  mask-image: url(img/youtube.svg);
-  -webkit-mask-image: url(img/youtube.svg);
+  mask-image: url(../img/youtube.svg);
+  -webkit-mask-image: url(../img/youtube.svg);
 }
 .about li a.vimeo {
-  mask-image: url(img/vimeo.svg);
-  -webkit-mask-image: url(img/vimeo.svg);
+  mask-image: url(../img/vimeo.svg);
+  -webkit-mask-image: url(../img/vimeo.svg);
 }
 .about li a.soundcloud {
-  mask-image: url(img/soundcloud.svg);
-  -webkit-mask-image: url(img/soundcloud.svg);
+  mask-image: url(../img/soundcloud.svg);
+  -webkit-mask-image: url(../img/soundcloud.svg);
 }
 .about li a.discord {
-  mask-image: url(img/discord.svg);
-  -webkit-mask-image: url(img/discord.svg);
+  mask-image: url(../img/discord.svg);
+  -webkit-mask-image: url(../img/discord.svg);
 }
 .about li a.itchio {
-  mask-image: url(img/itch-io.svg);
-  -webkit-mask-image: url(img/itch-io.svg);
+  mask-image: url(../img/itch-io.svg);
+  -webkit-mask-image: url(../img/itch-io.svg);
 }
 .about li a.steam {
-  mask-image: url(img/steam.svg);
-  -webkit-mask-image: url(img/steam.svg);
+  mask-image: url(../img/steam.svg);
+  -webkit-mask-image: url(../img/steam.svg);
 }
