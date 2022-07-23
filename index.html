@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guilds 'n Glory</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <img class="logo" src="./img/logo.svg" />
+        <ul class="header__menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#trailer">Trailer</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#guilds">Guilds</a></li>
+          <li><a href="#soundtracks">Soundtracks</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div />
+      </div>
+    </header>
+    <div class="hero">
+      <a id="home"></a>
+      <div class="wrapper">
+        <div id="fire-particles" class="fire-particles"></div>
+        <div class="hero__container">
+          <div class="hero__logo">
+            <img src="./img/logo.svg" />
+            <h3>
+              <span>Achieve the ultimate glory</span>
+              <span>Achieve the ultimate glory</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="trailer">
+        <div class="wrapper">
+          <a id="trailer"></a>
+          <h2>
+            <span>Watch The Trailer</span>
+            <span>Watch The Trailer</span>
+          </h2>
+          <div class="video">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/H6kWwz6t-pw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="screenshots">
+        <div class="wrapper">
+          <a id="screenshots"></a>
+          <h2>
+            <span>View The Screenshots</span>
+            <span>View The Screenshots</span>
+          </h2>
+          <div class="content">
+            <ul>
+              <li>
+                <img
+                  src="./img/thumb-barbarians-annihilated.webp"
+                  alt="Barbarians guild annihilated"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/thumb-gameplay-01.webp"
+                  alt="Battle gameplay 1"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/thumb-gameplay-02.webp"
+                  alt="Battle gameplay 2"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/thumb-gameplay-03.webp"
+                  alt="Battle gameplay 3"
+                />
+              </li>
+              <li>
+                <img src="./img/thumb-gameplay-lost.webp" alt="Battle lost" />
+              </li>
+              <li>
+                <img src="./img/thumb-gameplay-won.webp" alt="Battle won" />
+              </li>
+              <li>
+                <img
+                  src="./img/thumb-guild-select-01.webp"
+                  alt="Guild selection screen"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/thumb-knights-annihilated.webp"
+                  alt="knights guild annihilated"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/thumb-wizards-annihilated.webp"
+                  width="100%"
+                  alt="Wizards guild annihilated"
+                />
+              </li>
+            </ul>
+            <div id="screenshotPreview">
+              <div class="screenshotPreview__image"></div>
+              <button type="button" id="btnPrev"></button>
+              <button type="button" id="btnNext"></button>
+              <button type="button" id="btnClose"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="guilds">
+        <div class="wrapper">
+          <a id="guilds"></a>
+          <h2>
+            <span>Meet The Guilds</span>
+            <span>Meet The Guilds</span>
+          </h2>
+          <h5>
+            In a world of six guilds, each with their own unique skills and
+            abilities, only one can be crowned the winner. Choose your guild
+            wisely and lead your army to victory in this epic battle for
+            supremacy.
+          </h5>
+        </div>
+
+        <div class="archers guild">
+          <div class="wrapper">
+            <div class="guild__character">
+              <img src="./img/archer.webp" width="478" />
+            </div>
+            <div class="guild__info">
+              <h3>
+                <span>Archers Guild</span>
+                <span>Archers Guild</span>
+              </h3>
+              <p>
+                The Archers are a fearsome group of warriors who relied on their
+                greatwood bows to shoot volley after volley of deadly arrows
+                into the sky. They are so skilled in their craft that they could
+                shroud the sky in darkness with their attacks.
+              </p>
+              <div class="guild__ost">
+                <iframe
+                  width="100%"
+                  height="20"
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1232311660&color=%23ea5717&inverse=true&auto_play=false&show_user=false"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="assassins guild">
+          <div class="wrapper">
+            <div class="guild__character">
+              <img src="./img/assassin.webp" width="478" />
+            </div>
+            <div class="guild__info">
+              <h3>
+                <span>Assassins Guild</span>
+                <span>Assassins Guild</span>
+              </h3>
+              <p>
+                The Assassins, a secretive order of warriors who use chakrams as
+                their signature weapon, are known for their deadly precision and
+                unparalleled skills. But what is the story behind these
+                enigmatic warriors? Who were they and where did they come from?
+              </p>
+              <div class="guild__ost">
+                <iframe
+                  width="100%"
+                  height="20"
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1223827126&color=%23ea5717&inverse=true&auto_play=false&show_user=false"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="barbarians guild">
+          <div class="wrapper">
+            <div class="guild__character">
+              <img src="./img/barbarian.webp" width="478" />
+            </div>
+            <div class="guild__info">
+              <h3>
+                <span>Barbarians Guild</span>
+                <span>Barbarians Guild</span>
+              </h3>
+              <p>
+                The Barbarians, with their earth-shattering hammers, are a
+                fierce and fearless warriors. They have a natural strength and
+                power that makes them formidable opponents. They have a fierce
+                love of freedom and are not afraid to fight for what they
+                believe in.
+              </p>
+              <div class="guild__ost">
+                <iframe
+                  width="100%"
+                  height="20"
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1224450724&color=%23ea5717&inverse=true&auto_play=false&show_user=false"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="knights guild">
+          <div class="wrapper">
+            <div class="guild__character">
+              <img src="./img/knight.webp" width="478" />
+            </div>
+            <div class="guild__info">
+              <h3>
+                <span>Knights Guild</span>
+                <span>Knights Guild</span>
+              </h3>
+              <p>
+                The history of the Knights is one full of bloodshed and
+                destruction. the Knights have defended their land with their
+                swords. They are known for their chivalry and sense of honor.
+                Their swords are legendary and their skills as warriors
+                unsurpassed.
+              </p>
+              <div class="guild__ost">
+                <iframe
+                  width="100%"
+                  height="20"
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1229721184&color=%23ea5717&inverse=true&auto_play=false&show_user=false"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="priests guild">
+          <div class="wrapper">
+            <div class="guild__character">
+              <img src="./img/priest.webp" width="478" />
+            </div>
+            <div class="guild__info">
+              <h3>
+                <span>Priests Guild</span>
+                <span>Priests Guild</span>
+              </h3>
+              <p>
+                The Priests, with their holy fervor, march to the battlefield.
+                They believe that by sacrificing themselves they can help their
+                kingdom achieve victory. This sacrificial behavior has made the
+                priests some of the most feared warriors in all of history.
+              </p>
+              <div class="guild__ost">
+                <iframe
+                  width="100%"
+                  height="20"
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1235601571&color=%23ea5717&inverse=true&auto_play=false&show_user=false"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wizards guild">
+          <div class="wrapper">
+            <div class="guild__character">
+              <img src="./img/wizard.webp" width="478" />
+            </div>
+            <div class="guild__info">
+              <h3>
+                <span>Wizards Guild</span>
+                <span>Wizards Guild</span>
+              </h3>
+              <p>
+                The Wizards have been feared for their devastating fire. Some
+                say it was given to them by a god, others say they've just had a
+                lot of practice. But no one knows for sure how they produce the
+                flames that can incinerate everything in their path. Whatever
+                the case may be, these powerful magicians are a force to be
+                reckoned with.
+              </p>
+              <div class="guild__ost">
+                <iframe
+                  width="100%"
+                  height="20"
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1222654984&color=%23ea5717&inverse=true&auto_play=false&show_user=false"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="soundtracks">
+        <div class="wrapper">
+          <a id="soundtracks"></a>
+          <h2>
+            <span>Listen To Soundtracks</span>
+            <span>Listen To Soundtracks</span>
+          </h2>
+          <div class="soundcloud">
+            <iframe
+              width="100%"
+              height="450"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1401235378&color=%23fac634&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=true&show_teaser=true"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="wrapper">
+          <a id="about"></a>
+          <h2>
+            <span>About The Game</span>
+            <span>About The Game</span>
+          </h2>
+          <h5>
+            Guilds n Glory is an upcoming battle action game that allows players
+            to command an army and compete for glory. With detailed 3D graphics
+            and an action-packed gameplay, Guilds n Glory immerses players in
+            the thick of battle. Players can choose from a variety of guilds,
+            each with their own unique abilities, to conquer the opposition.
+          </h5>
+          <h4>
+            <span>Coming Soon</span>
+            <span>Coming Soon</span>
+          </h4>
+          <ul>
+            <li><img src="./img/logo-steam.webp" width="240" /></li>
+            <li><img src="./img/logo-apple-google.webp" width="240" /></li>
+          </ul>
+          <h4>
+            <span>Follow Us!</span>
+            <span>Follow Us!</span>
+          </h4>
+          <ul>
+            <li>
+              <a
+                target="_blank"
+                class="facebook"
+                href="//www.facebook.com/guildsnglory"
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                class="youtube"
+                href="//www.youtube.com/channel/UCfaAAEUy95s7-ip6irh6epA"
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                class="soundcloud"
+                href="//soundcloud.com/anthony-tambrin/sets/guilds-n-glory?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                class="discord"
+                href="//discord.gg/6qADD699"
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" class="steam" href="#"></a>
+            </li>
+            <li>
+              <a target="_blank" class="itchio" href="#"></a>
+            </li>
+          </ul>
+          <h4>
+            <span>Developer</span>
+            <span>Developer</span>
+          </h4>
+          <img src="./img/logo-mcm.webp" width="240" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <p>
+          &copy; 2022 <strong>GuildsNGlory.com</strong>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="./js/scroll-timeline.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

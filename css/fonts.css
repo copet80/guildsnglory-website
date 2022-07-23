@@ -1,0 +1,86 @@
+/* Regular fonts fall back support */
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-display: swap;
+    font-family: 'Gentona';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gentona-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Gentona-ExtraBold.woff') format('woff');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'LibreFranklin';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/LibreFranklin-Regular.woff2') format('woff2'),
+      url('../fonts/LibreFranklin-Regular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'LibreFranklin';
+    font-style: italic;
+    font-weight: normal;
+    src: url('../fonts/LibreFranklin-Italic.woff2') format('woff2'),
+      url('../fonts/LibreFranklin-Italic.woff') format('woff');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'LibreFranklin';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/LibreFranklin-Light.woff2') format('woff2'),
+      url('../fonts/LibreFranklin-Light.woff') format('woff');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'LibreFranklin';
+    font-style: italic;
+    font-weight: 100;
+    src: url('../fonts/LibreFranklin-LightItalic.woff2') format('woff2'),
+      url('../fonts/LibreFranklin-LightItalic.woff') format('woff');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'LibreFranklin';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/LibreFranklin-Bold.woff2') format('woff2'),
+      url('../fonts/LibreFranklin-Bold.woff') format('woff');
+  }
+}
+
+/* Variable fonts for modern browsers */
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-display: swap;
+    font-family: 'Gentona';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gentona-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Gentona-ExtraBold.woff') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'LibreFranklin';
+    font-style: normal;
+    src: url('../fonts/LibreFranklin-VariableFont_wght.woff2')
+        format('woff2 supports variations'),
+      url('../fonts/LibreFranklin-VariableFont_wght.woff2')
+        format('woff2-variations');
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'LibreFranklin';
+    font-style: italic;
+    src: url('../fonts/LibreFranklin-Italic-VariableFont_wght.woff2')
+        format('woff2 supports variations'),
+      url('../fonts/LibreFranklin-Italic-VariableFont_wght.woff2')
+        format('woff2-variations');
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+  }
+}
