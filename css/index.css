@@ -103,10 +103,15 @@ h2 {
   text-transform: uppercase;
   text-align: center;
 }
-
 @media screen and (max-width: 760px) {
   h2 {
     font-size: var(--font-size-lg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    margin-top: 4rem !important;
   }
 }
 
@@ -531,6 +536,13 @@ strong {
   padding-bottom: 5rem;
 }
 
+@media screen and (max-width: 480px) {
+  .soundtracks,
+  .about {
+    padding-bottom: 0;
+  }
+}
+
 #progress {
   position: fixed;
   z-index: 10;
@@ -549,6 +561,11 @@ strong {
   padding: 56.25% 0 0 0;
   margin: 0 0 8rem 0;
   overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .video {
+    margin-bottom: 0;
+  }
 }
 
 .video iframe {
@@ -606,6 +623,11 @@ section h5 {
 .screenshots .content {
   position: relative;
   margin-bottom: 7rem;
+}
+@media screen and (max-width: 480px) {
+  .screenshots .content {
+    margin-bottom: 0;
+  }
 }
 
 .screenshots .content > ul {
