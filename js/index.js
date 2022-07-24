@@ -41,7 +41,12 @@ const $ssCloseButton = document.querySelector('#screenshotPreview #btnClose');
 
 const $ssThumbs = document.querySelectorAll('.screenshots .content img');
 const ssThumbs = Array.from($ssThumbs).map((i) => i.src);
-const ssImages = ssThumbs.map((i) => i.replace('thumb-', 'screenshot-'));
+const ssImages = ssThumbs.map((i) => {
+  const filenameParts = i.split('/');
+  const filename = filenameParts[filenameParts.length - 1];
+  return `img/${filename.replace('thumb-', 'screenshot-')}`;
+});
+console.log(ssImages);
 
 // preload images
 const $ssImages = ssImages.map((src) => {
