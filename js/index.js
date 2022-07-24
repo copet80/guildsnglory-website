@@ -6,6 +6,23 @@ for (let i = 0; i < 25; i++) {
   $fireParticles.appendChild(document.createElement('div'));
 }
 
+const $menuButton = document.querySelector('#btnMenu');
+const $headerMenu = document.querySelector('.header__menu');
+let isMenuVisible = false;
+
+$menuButton.addEventListener('click', () => {
+  isMenuVisible = !isMenuVisible;
+  updateMenuVisibility();
+});
+
+function updateMenuVisibility() {
+  if (isMenuVisible) {
+    $headerMenu.classList.add('visible');
+  } else {
+    $headerMenu.classList.remove('visible');
+  }
+}
+
 const $ssPreview = document.querySelector('#screenshotPreview');
 const $ssImageContainer = document.querySelector(
   '#screenshotPreview .screenshotPreview__image',
