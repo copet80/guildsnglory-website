@@ -8,12 +8,20 @@ for (let i = 0; i < 25; i++) {
 
 const $menuButton = document.querySelector('#btnMenu');
 const $headerMenu = document.querySelector('.header__menu');
+const $headerMenuLinks = document.querySelectorAll('.header__menu a');
 let isMenuVisible = false;
 
 $menuButton.addEventListener('click', () => {
   isMenuVisible = !isMenuVisible;
   updateMenuVisibility();
 });
+
+for (let $headerMenuLink of $headerMenuLinks) {
+  $headerMenuLink.addEventListener('click', () => {
+    isMenuVisible = false;
+    updateMenuVisibility();
+  });
+}
 
 function updateMenuVisibility() {
   if (isMenuVisible) {
