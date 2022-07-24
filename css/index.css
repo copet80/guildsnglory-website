@@ -160,6 +160,7 @@ strong {
   position: relative;
   width: var(--wrapper-width);
   height: 100%;
+  overflow: hidden;
 }
 
 .hero,
