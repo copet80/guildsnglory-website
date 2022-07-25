@@ -32,29 +32,13 @@ function updateMenuVisibility() {
 }
 
 const $ssPreview = document.querySelector('#screenshotPreview');
-const $ssImageContainer = document.querySelector(
-  '#screenshotPreview .screenshotPreview__image',
-);
 const $ssPrevButton = document.querySelector('#screenshotPreview #btnPrev');
 const $ssNextButton = document.querySelector('#screenshotPreview #btnNext');
 const $ssCloseButton = document.querySelector('#screenshotPreview #btnClose');
 
 const $ssThumbs = document.querySelectorAll('.screenshots .content img');
 const ssThumbs = Array.from($ssThumbs).map((i) => i.src);
-const ssImages = ssThumbs.map((i) => {
-  const filenameParts = i.split('/');
-  const filename = filenameParts[filenameParts.length - 1];
-  return `img/${filename.replace('thumb-', 'screenshot-')}`;
-});
-console.log(ssImages);
-
-// preload images
-const $ssImages = ssImages.map((src) => {
-  const img = new Image();
-  img.src = src;
-  $ssImageContainer.appendChild(img);
-  return img;
-});
+const $ssImages = document.querySelectorAll('.screenshotPreview__image img');
 
 const ssLen = ssThumbs.length;
 let ssIndex = null;
