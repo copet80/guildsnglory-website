@@ -357,6 +357,42 @@ strong {
 
 .hero .wrapper {
   position: relative;
+  width: 100%;
+}
+
+.wishlist__container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.wishlist__content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 4rem 0;
+}
+
+.wishlist__content a {
+  transition: transform 0.3s;
+  width: clamp(30rem, 54vw, 54rem);
+}
+.wishlist__content a:hover {
+  transform: scale(1.05);
+}
+
+.wishlist__content img {
+  width: 100%;
 }
 
 .hero__container {
@@ -794,6 +830,9 @@ section h5 {
 
 .about li a {
   transition: transform 0.3s;
+}
+
+.about li a:not(.platform) {
   background: white;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
@@ -802,6 +841,7 @@ section h5 {
   width: 4rem;
   height: 4rem;
 }
+
 .about li a:hover {
   transform: scale(1.2);
 }
@@ -833,6 +873,10 @@ section h5 {
 .about li a.steam {
   mask-image: url(../img/steam.svg);
   -webkit-mask-image: url(../img/steam.svg);
+}
+
+.about li a .text {
+  display: none;
 }
 
 .about .companyLogo {
