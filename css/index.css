@@ -564,10 +564,10 @@ strong {
 }
 
 .trailer,
-.screenshots,
+.about,
 .guilds,
 .soundtracks,
-.about {
+.subscribe {
   background: transparent center 0 repeat-y;
   background-size: cover;
 }
@@ -576,7 +576,7 @@ strong {
   background-image: url('../img/barbarians-ambient.webp');
 }
 
-.screenshots {
+.about {
   background-image: url('../img/wizards-ambient.webp');
 }
 
@@ -589,7 +589,7 @@ strong {
   padding-bottom: 5rem;
 }
 
-.about {
+.subscribe {
   background-image: url('../img/archers-ambient.webp');
   padding-bottom: 5rem;
 }
@@ -652,7 +652,7 @@ section h5 {
   }
 }
 
-.about ul {
+.subscribe ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -663,32 +663,32 @@ section h5 {
   justify-content: center;
 }
 
-.about ul li {
+.subscribe ul li {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 2rem;
 }
 @media screen and (max-width: 480px) {
-  .about ul.follow {
+  .subscribe ul.follow {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 }
 
-.screenshots .content {
+.about .content {
   position: relative;
   margin-bottom: 7rem;
 }
 @media screen and (max-width: 640px) {
-  .screenshots .content {
+  .about .content {
     margin-bottom: 0;
     width: 100%;
   }
 }
 
-.screenshots .content > ul {
+.about .content > ul {
   width: 100%;
   list-style-type: none;
   margin: 0;
@@ -700,14 +700,14 @@ section h5 {
   row-gap: 1rem;
 }
 @media screen and (max-width: 640px) {
-  .screenshots .content > ul {
+  .about .content > ul {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 1fr);
     pointer-events: none;
   }
 }
 
-.screenshots .content > ul li {
+.about .content > ul li {
   position: relative;
   display: flex;
   align-items: center;
@@ -716,17 +716,17 @@ section h5 {
   cursor: pointer;
 }
 
-.screenshots .content > ul li img {
+.about .content > ul li img {
   width: 100%;
   transition: transform 0.3s;
 }
-.screenshots .content > ul li:hover img {
+.about .content > ul li:hover img {
   transform: scale(1.1);
 }
-.screenshots .content > ul li::after {
+.about .content > ul li::after {
   opacity: 0;
 }
-.screenshots .content > ul li:hover::after {
+.about .content > ul li:hover::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -828,11 +828,11 @@ section h5 {
   background-image: url(../img/xmark.svg);
 }
 
-.about li a {
+.subscribe li a {
   transition: transform 0.3s;
 }
 
-.about li a:not(.platform) {
+.subscribe li a:not(.platform) {
   background: white;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
@@ -842,43 +842,102 @@ section h5 {
   height: 4rem;
 }
 
-.about li a:hover {
+.subscribe li a:hover {
   transform: scale(1.2);
 }
 
-.about li a.facebook {
+.subscribe li a.facebook {
   mask-image: url(../img/facebook.svg);
   -webkit-mask-image: url(../img/facebook.svg);
 }
-.about li a.youtube {
+.subscribe li a.youtube {
   mask-image: url(../img/youtube.svg);
   -webkit-mask-image: url(../img/youtube.svg);
 }
-.about li a.vimeo {
+.subscribe li a.vimeo {
   mask-image: url(../img/vimeo.svg);
   -webkit-mask-image: url(../img/vimeo.svg);
 }
-.about li a.soundcloud {
+.subscribe li a.soundcloud {
   mask-image: url(../img/soundcloud.svg);
   -webkit-mask-image: url(../img/soundcloud.svg);
 }
-.about li a.discord {
+.subscribe li a.discord {
   mask-image: url(../img/discord.svg);
   -webkit-mask-image: url(../img/discord.svg);
 }
-.about li a.itchio {
+.subscribe li a.itchio {
   mask-image: url(../img/itch-io.svg);
   -webkit-mask-image: url(../img/itch-io.svg);
 }
-.about li a.steam {
+.subscribe li a.steam {
   mask-image: url(../img/steam.svg);
   -webkit-mask-image: url(../img/steam.svg);
 }
 
-.about li a .text {
+.subscribe li a .text {
   display: none;
 }
 
-.about .companyLogo {
+.subscribe .companyLogo {
   width: 15rem;
+}
+
+.gngSubscribeForm {
+  margin-bottom: 6rem;
+  padding: var(--padding);
+}
+.gngSubscribeForm .mc-field-group {
+  margin-bottom: 2rem;
+}
+.gngSubscribeForm label {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+}
+.gngSubscribeForm input {
+  padding: 1rem;
+  font-size: var(--font-size-md);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+.gngSubscribeForm input.button {
+  background: linear-gradient(#b91617, #871a0f);
+  border: 3px solid #f6b514;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gngSubscribeForm input.button:hover {
+  transform: scale(1.1);
+}
+.gngSubscribeForm .mc-field-group {
+  display: grid;
+  grid-template-columns: 18rem auto;
+}
+
+@media screen and (max-width: 480px) {
+  .gngSubscribeForm {
+    width: 100%;
+  }
+  .gngSubscribeForm .mc-field-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .gngSubscribeForm label {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .gngSubscribeForm .mc-field-group {
+    align-items: center;
+    justify-content: center;
+  }
+  .gngSubscribeForm .optionalParent {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
