@@ -36,7 +36,7 @@ const $ssPrevButton = document.querySelector('#screenshotPreview #btnPrev');
 const $ssNextButton = document.querySelector('#screenshotPreview #btnNext');
 const $ssCloseButton = document.querySelector('#screenshotPreview #btnClose');
 
-const $ssThumbs = document.querySelectorAll('.screenshots .content img');
+const $ssThumbs = document.querySelectorAll('.about .content img');
 const ssThumbs = Array.from($ssThumbs).map((i) => i.src);
 const $ssImages = document.querySelectorAll('.screenshotPreview__image img');
 
