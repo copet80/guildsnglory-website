@@ -349,7 +349,9 @@ strong {
 .hero {
   width: 100%;
   height: calc((996 / 1800) * 100vw);
-  background: transparent url('../img/title-backdrop.webp') center 0 no-repeat;
+  max-height: 80rem;
+  background: transparent url('../img/title-backdrop.webp') center center
+    no-repeat;
   background-size: 100% auto;
   display: flex;
   justify-content: center;
