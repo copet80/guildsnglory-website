@@ -527,7 +527,7 @@ strong {
   }
 
   .hero-ground-bg {
-    bottom: calc(-15rem + 1vw);
+    bottom: calc(-5rem - 6vw);
   }
 
   .hero-ground-fg {
@@ -591,6 +591,7 @@ strong {
     margin-right: -16rem;
     width: 48rem;
     height: 50%;
+    bottom: calc(-4rem + 5vw);
   }
 
   .hero-assassin {
@@ -602,7 +603,7 @@ strong {
     width: 48rem;
     height: 40%;
     top: auto;
-    bottom: 18rem;
+    bottom: 13rem;
   }
 
   .hero-archer-priest {
@@ -630,6 +631,7 @@ strong {
   .hero-knight {
     margin-right: -3rem;
     width: 56%;
+    bottom: calc(-13rem + 26vw);
   }
 
   .hero-assassin {
