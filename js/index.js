@@ -31,7 +31,9 @@ function updateMenuVisibility() {
   }
 }
 
-let vw, vwh;
+let vw,
+  vwh,
+  mx = 0;
 const $prxImages = document.querySelectorAll('[data-parallax-x]');
 const prxImages = [];
 for (let $prxImage of $prxImages) {
@@ -46,12 +48,15 @@ window.addEventListener('resize', handleWindowResize);
 document.addEventListener('mousemove', handleDocumentMouseMove);
 
 function handleWindowResize() {
+  const ratio = mx / vw;
   vw = window.innerWidth;
   vwh = vw * 0.5;
+  handleDocumentMouseMove({ clientX: ratio * vw });
 }
 
 function handleDocumentMouseMove(event) {
   const { clientX } = event;
+  mx = clientX;
   const len = prxImages.length;
   let prxImage;
   let x, ox, px;
