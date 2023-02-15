@@ -552,7 +552,7 @@ strong {
 
 @media screen and (max-width: 760px) {
   .hero {
-    height: calc((996 / 1800) * 100vh);
+    height: 62rem;
     background-size: auto 100%;
   }
 
