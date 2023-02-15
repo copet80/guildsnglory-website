@@ -31,6 +31,7 @@
   --wrapper-width: clamp(32rem, 100%, 120rem);
 
   --header-height: 5rem;
+  --parallax-scale: 0.7;
 }
 
 * {
@@ -350,9 +351,6 @@ strong {
   width: 100%;
   height: calc((996 / 1800) * 100vw);
   max-height: 80rem;
-  background: transparent url('../img/title-backdrop.webp') center center
-    no-repeat;
-  background-size: 100% auto;
   display: flex;
   justify-content: center;
 }
@@ -360,6 +358,284 @@ strong {
 .hero .wrapper {
   position: relative;
   width: 100%;
+}
+
+.parallax {
+  background: transparent center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-sky {
+  background-size: cover;
+  background-position: center calc(100% + 10vw);
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/hero-sky.webp');
+}
+.hero-archer-priest {
+  bottom: 15rem;
+  margin-left: 5vw;
+  background-position: left bottom;
+  width: 165px;
+  height: 168px;
+  background-image: url('../img/hero-archer-priest.webp');
+}
+.hero-arrow-fg-left {
+  width: 132px;
+  height: 230px;
+  background-image: url('../img/hero-arrow-fg-left.webp');
+}
+.hero-arrow-fg-right {
+  left: auto;
+  right: 0;
+  width: 241px;
+  height: 357px;
+  background-image: url('../img/hero-arrow-fg-right.webp');
+}
+.hero-arrow-fg-top-left {
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  height: 40%;
+  background-position: left top;
+  background-image: url('../img/hero-arrow-fg-top-left.webp');
+  display: none;
+}
+.hero-arrow-fg-top-right {
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: 4rem;
+  width: 100%;
+  height: 15%;
+  background-position: right top;
+  background-image: url('../img/hero-arrow-fg-top-right.webp');
+  display: none;
+}
+.hero-assassin {
+  top: 0;
+  bottom: auto;
+  left: 50%;
+  margin: 8rem 0 0 30rem;
+  width: 412px;
+  height: 473px;
+  background-image: url('../img/hero-assassin.webp');
+}
+.hero-barbarian-wizard {
+  left: auto;
+  right: 0;
+  bottom: calc(18vw - 14rem);
+  margin-right: 5vw;
+  background-position: right bottom;
+  width: 173px;
+  height: 177px;
+  background-image: url('../img/hero-barbarian-wizard.webp');
+}
+.hero-fog-left {
+  background-position: left bottom;
+  width: 20vw;
+  height: 100%;
+  background-image: url('../img/hero-fog-left.webp');
+}
+.hero-fog-right {
+  left: auto;
+  right: 0;
+  background-position: right bottom;
+  width: 28vw;
+  height: 100%;
+  background-image: url('../img/hero-fog-right.webp');
+}
+.hero-ground-bg {
+  background-size: cover;
+  background-position: left bottom;
+  bottom: -15rem;
+  width: 100vw;
+  height: 100%;
+  background-image: url('../img/hero-ground-bg.webp');
+}
+.hero-ground-fg {
+  background-size: 70%;
+  background-position: right bottom;
+  width: 100vw;
+  height: 100%;
+  background-image: url('../img/hero-ground-fg.webp');
+}
+.hero-ground-dust {
+  background-size: cover;
+  background-position: center calc(100% + 10vw);
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/hero-ground-dust.webp');
+}
+.hero-knight {
+  left: auto;
+  right: 50%;
+  margin: 0 30rem 2rem 0;
+  width: 400px;
+  height: 595px;
+  background-image: url('../img/hero-knight.webp');
+}
+
+.hero__container {
+  display: flex;
+  justify-content: center;
+  height: 80rem;
+}
+
+.hero__logo {
+  position: relative;
+  margin-top: clamp(6rem, 8.4vw, 12.4rem);
+  width: clamp(30rem, 57vw, 82rem);
+  text-align: center;
+}
+
+.hero__logo img {
+  width: 60rem;
+}
+
+@media screen and (max-width: 2400px) {
+  .hero-fog {
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .hero__logo img {
+    width: clamp(30rem, 40vw, 60rem);
+  }
+
+  .hero-knight {
+    left: 0;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: 35vw;
+    height: 40vw;
+  }
+
+  .hero-assassin {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5vw;
+    width: 35vw;
+    height: 32vw;
+  }
+
+  .hero-ground-bg {
+    bottom: calc(-15rem + 1vw);
+  }
+
+  .hero-ground-fg {
+    background-size: 100%;
+    bottom: -5vw;
+  }
+
+  .hero-arrow-fg-left {
+    background-position: left bottom;
+    width: 10vw;
+  }
+
+  .hero-arrow-fg-right {
+    background-position: right bottom;
+    width: 16vw;
+  }
+
+  .hero-archer-priest {
+    bottom: calc(22vw - 15rem);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .hero {
+    height: calc((996 / 1800) * 100vh);
+    background-size: auto 100%;
+  }
+
+  .hero__logo {
+    width: clamp(30rem, 70vw, 82rem);
+  }
+
+  .hero__logo h3 {
+    font-size: clamp(1.38rem, 3.2vw, 5rem);
+  }
+
+  .hero-sky {
+    background-position: center top;
+  }
+
+  .hero-arrow-fg-top-left {
+    display: block;
+  }
+
+  .hero-arrow-fg-top-right {
+    display: block;
+  }
+
+  .hero-fog-left {
+    width: 30%;
+  }
+
+  .hero-fog-right {
+    width: 45%;
+  }
+
+  .hero-knight {
+    left: auto;
+    right: 50%;
+    margin-left: 0;
+    margin-right: -16rem;
+    width: 48rem;
+    height: 50%;
+  }
+
+  .hero-assassin {
+    left: 50%;
+    right: 0;
+    margin-left: -15rem;
+    margin-right: 0;
+    margin-top: 0;
+    width: 48rem;
+    height: 40%;
+    top: auto;
+    bottom: 18rem;
+  }
+
+  .hero-archer-priest {
+    bottom: 1.5rem;
+    height: 15%;
+  }
+
+  .hero-barbarian-wizard {
+    width: 20%;
+    bottom: 7rem;
+  }
+
+  .hero-ground-fg {
+    bottom: 0;
+  }
+
+  .hero-ground-bg {
+    bottom: 0;
+    width: 100%;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero-knight {
+    margin-right: -3rem;
+    width: 56%;
+  }
+
+  .hero-assassin {
+    margin-left: -5rem;
+    width: 60%;
+  }
 }
 
 .wishlist__container {
@@ -376,6 +652,7 @@ strong {
     rgba(0, 0, 0, 0.5) 35%,
     rgba(0, 0, 0, 0) 100%
   );
+  z-index: 2;
 }
 
 .wishlist__content {
@@ -395,40 +672,6 @@ strong {
 
 .wishlist__content img {
   width: 100%;
-}
-
-.hero__container {
-  display: flex;
-  justify-content: center;
-}
-
-.hero__logo {
-  position: relative;
-  margin-top: clamp(6rem, 8.4vw, 12.4rem);
-  width: clamp(30rem, 57vw, 82rem);
-}
-
-.hero__logo h3 {
-  position: absolute;
-  margin: 0;
-  top: clamp(5rem, 70%, 16rem);
-  left: clamp(1.5rem, 33%, 28rem);
-  font-size: clamp(1.38rem, 2.6vw, 3.8rem);
-}
-
-@media screen and (max-width: 760px) {
-  .hero {
-    height: calc((996 / 1800) * 100vh);
-    background-size: auto 100%;
-  }
-
-  .hero__logo {
-    width: clamp(30rem, 70vw, 82rem);
-  }
-
-  .hero__logo h3 {
-    font-size: clamp(1.38rem, 3.2vw, 5rem);
-  }
 }
 
 .guilds {

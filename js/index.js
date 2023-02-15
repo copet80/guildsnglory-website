@@ -31,6 +31,48 @@ function updateMenuVisibility() {
   }
 }
 
+let vw, vwh;
+const $prxImages = document.querySelectorAll('[data-parallax-x]');
+const prxImages = [];
+for (let $prxImage of $prxImages) {
+  prxImages.push({
+    $el: $prxImage,
+    px: Number($prxImage.getAttribute('data-parallax-x')),
+    pAlign: $prxImage.getAttribute('data-parallax-align'),
+  });
+}
+
+window.addEventListener('resize', handleWindowResize);
+document.addEventListener('mousemove', handleDocumentMouseMove);
+
+function handleWindowResize() {
+  vw = window.innerWidth;
+  vwh = vw * 0.5;
+}
+
+function handleDocumentMouseMove(event) {
+  const { clientX } = event;
+  const len = prxImages.length;
+  let prxImage;
+  let x, ox, px;
+  for (let i = 0; i < len; i++) {
+    prxImage = prxImages[i];
+    ox = 0;
+    if (prxImage.pAlign) {
+      px = prxImage.px * 0.005 * vw * 1;
+      if (prxImage.pAlign === 'all' || prxImage.pAlign.includes('w')) {
+        ox = -px;
+      } else if (prxImage.pAlign === 'all' || prxImage.pAlign.includes('e')) {
+        ox = px;
+      }
+    }
+    x = ox + prxImage.px * 0.005 * (clientX - vwh);
+    prxImage.$el.style.transform = `translate(${x}px, 0)`;
+  }
+}
+
+handleWindowResize();
+
 const $ssPreview = document.querySelector('#screenshotPreview');
 const $ssPrevButton = document.querySelector('#screenshotPreview #btnPrev');
 const $ssNextButton = document.querySelector('#screenshotPreview #btnNext');
