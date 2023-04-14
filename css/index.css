@@ -773,6 +773,7 @@ strong {
 .trailer,
 .about,
 .guilds,
+.presskit,
 .soundtracks,
 .subscribe {
   background: transparent center 0 repeat-y;
@@ -789,6 +790,11 @@ strong {
 
 .guilds {
   background-image: url('../img/knights-ambient.webp');
+}
+
+.presskit {
+  background-image: url('../img/barbarians-ambient.webp');
+  padding-bottom: 5rem;
 }
 
 .soundtracks {
@@ -1053,6 +1059,14 @@ section h5 {
   transform: scale(1.2);
 }
 
+.subscribe li a.twitter {
+  mask-image: url(../img/twitter.svg);
+  -webkit-mask-image: url(../img/twitter.svg);
+}
+.subscribe li a.tiktok {
+  mask-image: url(../img/tiktok.svg);
+  -webkit-mask-image: url(../img/tiktok.svg);
+}
 .subscribe li a.facebook {
   mask-image: url(../img/facebook.svg);
   -webkit-mask-image: url(../img/facebook.svg);
