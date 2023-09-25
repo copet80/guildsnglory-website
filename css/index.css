@@ -1075,6 +1075,10 @@ section h5 {
   mask-image: url(../img/youtube.svg);
   -webkit-mask-image: url(../img/youtube.svg);
 }
+.subscribe li a.instagram {
+  mask-image: url(../img/instagram.svg);
+  -webkit-mask-image: url(../img/instagram.svg);
+}
 .subscribe li a.vimeo {
   mask-image: url(../img/vimeo.svg);
   -webkit-mask-image: url(../img/vimeo.svg);
