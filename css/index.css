@@ -253,6 +253,19 @@ header .wrapper {
   }
 }
 
+body.simple header,
+body.simple main,
+body.simple footer {
+  max-width: 1236px;
+}
+
+body.simple header {
+  position: relative;
+  background: transparent url(../img/header-simple-bg.webp) center center
+    no-repeat;
+  height: 360px;
+}
+
 #btnMenu {
   transition: transform 0.3s;
   outline: 0;
