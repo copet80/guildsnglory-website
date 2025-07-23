@@ -5,7 +5,11 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build *.html"
+    "build": "parcel build *.html",
+    "build:clean": "rm -rf dist && npm run build",
+    "deploy": "npm run build && echo 'Build complete! Push to GitHub to deploy to Netlify.'",
+    "preview": "npm run build && npx serve dist",
+    "check": "echo 'Checking deployment setup...' && echo 'Hosting: Netlify' && echo 'Domain: www.guildsnglory.com' && echo 'Repository: github.com/copet80/guildsnglory-website'"
   },
   "dependencies": {
     "autoprefixer": "9.7.5",
