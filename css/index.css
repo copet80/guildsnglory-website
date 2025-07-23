@@ -1179,3 +1179,49 @@ section h5 {
     justify-content: flex-end;
   }
 }
+
+/* Anti-spam honeypot fields - multiple methods to hide from humans */
+.honeypot-fields {
+  position: absolute !important;
+  left: -5000px !important;
+  top: -5000px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Additional hiding for honeypot inputs */
+.honeypot-fields input,
+.honeypot-fields textarea,
+.honeypot-fields select {
+  position: absolute !important;
+  left: -5000px !important;
+  top: -5000px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  background: transparent !important;
+  color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Screen reader accessibility - completely hide from assistive technology */
+.honeypot-fields[aria-hidden="true"] {
+  display: none !important;
+}

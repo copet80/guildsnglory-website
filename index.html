@@ -516,8 +516,9 @@
               method="post"
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
-              class="validate"
+              class="validate anti-spam-form"
               target="_self"
+              data-form-start-time=""
             >
               <div id="mc_embed_signup_scroll">
                 <div class="mc-field-group">
@@ -557,17 +558,21 @@
                     style="display: none;"
                   ></div>
                 </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div
-                  style="position: absolute; left: -5000px;"
-                  aria-hidden="true"
-                >
+                <!-- Enhanced honeypot fields - real people should not fill these in -->
+                <div class="honeypot-fields" style="position: absolute; left: -5000px; opacity: 0; pointer-events: none;" aria-hidden="true">
+                  <!-- Original Mailchimp honeypot -->
                   <input
                     type="text"
                     name="b_a097ba680aff5996d488abdbf_11d7f73c5c"
                     tabindex="-1"
                     value=""
                   />
+                  <!-- Additional honeypot fields -->
+                  <input type="text" name="website" tabindex="-1" value="" autocomplete="off" />
+                  <input type="email" name="email_confirm" tabindex="-1" value="" autocomplete="off" />
+                  <input type="text" name="phone" tabindex="-1" value="" autocomplete="off" />
+                  <input type="checkbox" name="subscribe_newsletter" tabindex="-1" />
+                  <input type="text" name="company" tabindex="-1" value="" autocomplete="off" />
                 </div>
                 <div class="optionalParent">
                   <div class="clear foot">
@@ -700,6 +705,7 @@
         </p>
       </div>
     </footer>
+    <script src="js/anti-spam.js"></script>
     <script src="js/index.js"></script>
     <script src="js/common.js"></script>
   </body>
