@@ -1225,3 +1225,113 @@ section h5 {
 .honeypot-fields[aria-hidden="true"] {
   display: none !important;
 }
+
+/* Dynamic honeypot system styles */
+.dynamic-honeypots {
+  position: absolute !important;
+  left: -5000px !important;
+  top: -5000px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  z-index: -9999 !important;
+}
+
+/* Individual honeypot field types */
+.honeypot-field {
+  position: absolute !important;
+  overflow: hidden !important;
+}
+
+/* Invisible honeypots - completely hidden */
+.honeypot-invisible,
+.honeypot-invisible input,
+.honeypot-invisible label {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+
+/* Tiny honeypots - 1px size but visible */
+.honeypot-tiny,
+.honeypot-tiny input {
+  width: 1px !important;
+  height: 1px !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  opacity: 0.01 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+/* Off-screen honeypots - positioned way off screen */
+.honeypot-offscreen,
+.honeypot-offscreen input,
+.honeypot-offscreen label {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+
+/* Fake required fields - hidden but with realistic styling */
+.honeypot-fake-required,
+.honeypot-fake-required input,
+.honeypot-fake-required label {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Ensure all honeypot inputs have no visual impact */
+.dynamic-honeypots input,
+.dynamic-honeypots textarea,
+.dynamic-honeypots select,
+.honeypot-field input,
+.honeypot-field textarea,
+.honeypot-field select {
+  background: transparent !important;
+  color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  text-indent: -9999px !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+/* Additional protection against CSS injection attacks */
+.dynamic-honeypots[aria-hidden="true"] {
+  display: none !important;
+}
+
+/* Fallback hiding for all honeypot variations */
+input[name*="user_"], 
+input[name*="account_"], 
+input[name*="profile_"], 
+input[name*="contact_"], 
+input[name*="member_"], 
+input[name*="client_"] {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
